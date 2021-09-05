@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/login.css">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    <title>Teams Call</title>
+</head>
+
+<body>
+    <!-- --------top wave svg container-------- -->
+    <div class="wave-container">
+
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#a2d9ff" fill-opacity="0.5"
+                d="M0,320L34.3,277.3C68.6,235,137,149,206,122.7C274.3,96,343,128,411,122.7C480,117,549,75,617,80C685.7,85,754,139,823,144C891.4,149,960,107,1029,85.3C1097.1,64,1166,64,1234,69.3C1302.9,75,1371,85,1406,90.7L1440,96L1440,0L1405.7,0C1371.4,0,1303,0,1234,0C1165.7,0,1097,0,1029,0C960,0,891,0,823,0C754.3,0,686,0,617,0C548.6,0,480,0,411,0C342.9,0,274,0,206,0C137.1,0,69,0,34,0L0,0Z">
+            </path>
+        </svg>
+    </div>
+
+    <!-- --------------header------------------ -->
+    <div class="header">
+
+        <div class="logo-icon">
+
+        </div>
+        <div class="logo-name">
+            <h4>Teams Call</h4>
+        </div>
+    </div>
+
+    <!-- -------------main body----------------- -->
+    <div class="main-div">
+
+        <!-- ---------left section --------------- -->
+        <div class="left-div">
+            <div class="home-page-image">
+                <img class="work-from-home-image" src="images/work-from-home.svg" alt="">
+            </div>
+        </div>
+
+        <!-- -------------right section------------- -->
+        <div class="right-div">
+
+            <!-- -------login greeting-------------- -->
+            <div class="login-div">
+                <h1>Welcome Back!</h1>
+                <p>Please sign in to your account</p>
+            </div>
+
+            <!-- ------------login form-------------- -->
+            <form class="login-form" action="/login" method="post">
+
+                <div class="mb-3">
+                    <label class="form-label">Username</label>
+                    <input type="text" name="username" class="form-control">
+
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" class="form-control">
+                </div>
+                <div class="sign-in-div">
+                    <button type="submit" class="btn btn-info sign-in-button">Sign In</button>
+                </div>
+            </form>
+
+            <!-- ---------sign up option--------------- -->
+            <div class="login-option">
+                <p>Do not have an account?</p>
+                <a href="/register"><button class="btn btn-outline-info btn-sm">Sign Up</button></a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

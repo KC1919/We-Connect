@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+  }
+  *,*::before,*::after {
+    box-sizing: inherit;
+  }
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+  h1{
+    font-size: 3rem;
+    text-align: left;
+}
+/* ---------------wave container-------------- */
+
+  .wave-container > svg {
+    display: block;
+
+  }
+ 
+  .wave-container {
+    position: relative;
+    /* background: #09F; */
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+  }
+
+/* ---------------------header-------------------- */
+.header{
+    height: 10%;
+    padding: 8px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    display: flex;
+    color: #3A6C87;
+    align-items: center;
+    justify-content: space-between;
+}
+
+  /* --------------------main div-------------------------- */
+
+.sign-up-div{
+    text-align: center;
+}
+.sign-up-div h1{
+    /* color: #50b1ce; */
+    color: 	#79A2BF;
+    font-weight: 400;
+    margin-bottom: 50px;
+}
+.sign-up-div p{
+    opacity: 0.8;
+}
+.main-div{
+    position: absolute;
+    top: 70px;
+    left: 150px;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 50px;
+    padding-bottom: 0;
+    padding-left: 30px;
+    padding-top: 0;
+}
+.left-div{
+    width: 50%;
+}
+
+.right-div{
+    width: 50%;
+    text-align: center;
+    /* margin-right: 40px; */
+    margin-left: 120px;
+    /* margin-top: 10px; */
+}
+.sign-up{
+    text-align: center;
+}
+.sign-up p{
+    font-size: small;
+}
+
+.login-option{
+    margin-top: 30px;
+}
+.login-option p{
+    margin-bottom: 5px;
+}
+
+.home-page-image{
+    margin-left: auto;
+}
+.video-call-image{
+    height: 650px;
+    width: 650px;
+    margin-bottom: 0;
+}
+
+.btn-info,  .btn-info:active, .btn-info:visited, .btn-info:focus{
+    background-color: #79A2BF !important;
+    border-color: #79A2BF !important;
+}
+.btn-info:hover{
+    background-color:#8FBAD9 !important;
+}
+
+.btn-outline-info,  .btn-outline-info:active, .btn-outline-info:visited, .btn-outline-info:focus{
+    border-color: #79A2BF !important;
+    color: #79A2BF ;
+}
+.btn-outline-info:hover{
+    background-color:#8FBAD9 !important;
+}

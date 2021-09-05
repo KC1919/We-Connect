@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.jquery.min.js"></script>
+  <link href="https://cdn.rawgit.com/harvesthq/chosen/gh-pages/chosen.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/chats.css">
+  <link rel="stylesheet" href="/css/formCss.css">
+  
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <title>Teams Call</title>
+
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script type="text/javascript">
+    const name = `<%=name%>`;
+    const username = `<%=username%>`
+    let groups= `<%=groupsArr%>`[0];
+  </script>
+  
+</head>
+
+<body>
+
+  <!-- ----------------header----------------------- -->
+  <div class="header">
+
+    <div class="header-left">
+      <div class="logo-icon">
+
+      </div>
+      <div class="logo-name">
+        <h4>Teams Call</h4>
+      </div>
+    </div>
+
+    <div class="header-middle">
+      <div>
+        <h4 class="header-texts">Welcome, <%=name%>!</h4>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="logout">
+        <a href="/logout"><button class="logout-btn btn btn-outline-info">LOGOUT</button></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------main body------------------ -->
+  <div class="main-div">
+
+     <!-- -----------groups list section--------------- -->
+    <div class="left-div">
+
+      <div class="chat-header">
+        <div class="chat-heading">
+          Conversations
+        </div>
+        <div title="Add a new meeting group" class="chat-add-icon">
+          <button  class="new-chat-btn"><img class="new-chat-icon" src="/images/new-chat.png" alt=""></button>
+        </div>
+      </div>
+      <hr>
+      <div class="chat-grp-container">
+        <div class="chat-grp">
+          <%for(let i=groupsArr.length-1;i>=0;i--){%>
+          <div style="cursor:pointer;" class="chat-name">
+            <div>
+              <img class="chat-icon" src="/images/calender.png" alt="">
+            </div>
+            <p style="margin:auto; margin-left:0;" class="groupNames" data-grpID=<%=groupsArr[i].grpId%>><%=groupsArr[i].name%></p>
+          </div>
+          <%}%>
+        </div>
+      </div>
+    </div>
+
+    <!-- ----------------Create new meetings container------------ -->
+    <div class="modal-container" id="modalcontainer" style="display: none;">
+
+        <form class="scheduleForm">
+
+    
+          <h5 style="color:#3A6C87;text-align: center;padding-bottom: 12px;">Schedule Meeting</h5>
+
+            <input type="text" name="title" class="form-control title" placeholder="Meeting Title">
+
+
+            <div id="list1" class="dropdown-check-list add-participants-div" tabindex="100">
+                <span class="anchor">Add Participants</span>
+                <ul class="items checkbox-list">
+                    <!-- <li class="checkbox-elements"><input type="checkbox" />Apple </li> -->
+                </ul>
+            </div>
+
+            <div class="time-date-div">
+                <input class="date form-control" name="date" type="date">
+                <input class="time form-control" name="time" type="time">
+            </div>
+            <div>
+                <button onclick="validate(this)" class="btn btn-outline-info">Submit</button>
+            </div>
+
+        </form>
+
+    </div>
+
+    <!-- -----------------Group Chat section----------------- -->
+    <div class="right-div">
+      <div class="grp-header">
+
+        <!-- current groupname header -->
+        <div class="grp-name">
+          <div>
+            <img class="chat-icon" src="/images/calender.png" alt="">
+          </div>
+          <p style="margin:auto; margin-left:0;" class="currentGroup" data-grpID=<%=groupsArr.length>0?groupsArr[groupsArr.length-1].grpId:null%>><%=groupsArr.length>0?groupsArr[groupsArr.length-1].name:null%>
+          </p>
+        </div>
+
+        <!-- join a meeting btn -->
+        <div class="start-meeting">
+          <button class="btn btn-info join-btn">Join Meeting</button>
+        </div>
+
+        <!-- view participants btn -->
+        <div title="View Participants" class="add-participants">
+          <button  class="add-user-btn">
+            <img class="add-user" src="/images/viewUsers.png" alt="">
+          </button>
+        </div>
+
+      </div>
+
+      <hr>
+
+      <!-- --------main chat section----------- -->
+      <div class="chat-section">
+        <div class="chat-container">
+          <ul class="chatList">
+            <!-- <li class="left message"> -->
+            <!-- <p class="user-name">Jasleen</p>Hello, welcome to the group -->
+            <!-- </li> -->
+            <!-- <br> -->
+          </ul>
+
+        </div>
+
+        <div class="input-container">
+          <input class="chat-input form-control" type="text" name="user-message" placeholder="Type a message here...">
+          <div class="send-btn"><button class="send-btn"><img class="send-icon" src="/images/send.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- participant list div -->
+    <div class="participant-list" style="display:none;">
+      <!-- <div class="member-details">
+        <p class="member-name">Jasleen</p>
+        <p class="member-username">jasleen_06</p>
+      </div> -->
+    </div>
+  </div>
+
+  <script src="/chatScript.js" charset="utf-8"></script>
+</body>
+
+</html>

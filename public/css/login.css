@@ -1,0 +1,122 @@
+html {
+    box-sizing: border-box;
+  }
+  *,*::before,*::after {
+    box-sizing: inherit;
+  }
+
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+
+  h1{
+    font-size: 3rem;
+    text-align: left;
+    color: 	#79A2BF;
+}
+
+/* --------------------wave container----------------- */
+  .wave-container > svg {
+    display: block;
+
+  }
+
+  .wave-container {
+    position: relative;
+    /* background: #09F; */
+    color: #FFF;
+    text-align: center;
+    overflow: hidden;
+  }
+
+/* ------------------------header--------------------------- */
+.header{
+    height: 10%;
+    padding: 8px;
+    position: absolute;
+    top: 0px;
+    left: 20px;
+    display: flex;
+    color: #3A6C87;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* -----------------------main div--------------------------- */
+
+
+.main-div{
+    position: absolute;
+    top: 0px;
+    left:150px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    padding: 50px;
+    margin-top: 40px;
+
+}
+.left-div{
+    width: 600px;
+    margin-top: 100px;
+    margin-right: 100px;
+}
+.right-div{
+    width: 400px;
+    margin-top: 70px;
+}
+
+.work-from-home-image{
+    height: 400px;
+    width: 500px;
+    margin-bottom: 0;
+
+}
+.login-div{
+    margin-bottom: 50px;
+}
+.login-div h1{
+    font-weight: 400;
+    text-align: center;
+   margin-bottom: 0;
+}
+.login-div p{
+    opacity: 0.7;
+    font-weight: 300;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.login-form{
+   width: auto;
+}
+.sign-in-button{
+    margin-top: 40px;
+    width: 100%;
+}
+.sign-in-button{
+    color: rgb(10, 20, 27);
+}
+
+.btn-info,  .btn-info:active, .btn-info:visited, .btn-info:focus{
+    background-color: #79A2BF !important;
+    border-color: #79A2BF !important;
+}
+.btn-info:hover{
+    background-color:#8FBAD9 !important;
+}
+
+.login-option{
+    margin-top: 30px;
+}
+.login-option p{
+    margin-bottom: 5px;
+}
+.btn-outline-info,  .btn-outline-info:active, .btn-outline-info:visited, .btn-outline-info:focus{
+    border-color: #79A2BF !important;
+    color: #79A2BF ;
+}
+.btn-outline-info:hover{
+    background-color:#8FBAD9 !important;
+}
