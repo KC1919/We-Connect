@@ -1,12 +1,7 @@
 # Teams call
 
-Built as a part of Microsoft Engage 2021 Program
 
 [Live Project](https://teams-calling.herokuapp.com)
-
-[Documentation](https://docs.google.com/document/d/1W2hogJ3US0u-PmkSGjt7UnJPM1zQZTF687CGzfur5yQ/edit#heading=h.sf86nweplnlb)
-
-[Demo](https://www.youtube.com/watch?v=uw6qzEavzD0)
 
 # Overview
 A Video calling web application which lets users register and create meeting groups for real time chatting and video calling. It lets users schedule meetings and send email notifications. The video call interface has features like media controls, screen share and admin has been given the right to remove participants from the meeting.

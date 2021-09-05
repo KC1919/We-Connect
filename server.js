@@ -471,8 +471,8 @@ async function run() {
         let transporter = nodemailer.createTransport({
           service: 'gmail',
           auth: {
-            user: `${process.env.HOST_EMAIL}`, //sender
-            pass: `youcantgetmypassword@007`
+            user: process.env.HOST_EMAIL, //sender
+            pass: process.env.HOST_EMAIL_SSAP
           }
         });
 
@@ -481,7 +481,7 @@ async function run() {
 
         // setup email data with unicode symbols
         let mailOptions = {
-          from: `"Teams-app" <${process.env.HOST_EMAIL}>`, // sender address
+          from: `<${process.env.HOST_EMAIL}>`, // sender address
           to: mailList, // members of the meeting
           subject: 'Meeting Reminder', // Subject line
           text: 'You have a meeting scheduled', // plain text body
