@@ -472,7 +472,7 @@ async function run() {
           service: 'gmail',
           auth: {
             user: `${process.env.HOST_EMAIL}`, //sender
-            pass: `${process.env.HOST_EMAIL_SSAP}`
+            pass: `youcantgetmypassword@007`
           }
         });
 
