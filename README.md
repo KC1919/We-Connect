@@ -1,4 +1,4 @@
-# Teams call
+# We Connect
 
 [Live Project](https://teams-calling.herokuapp.com)
 
